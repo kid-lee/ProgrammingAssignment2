@@ -2,6 +2,7 @@
 ## functions do
 
 ## Write a short comment describing this function
+# Create Object makeCacheMatrix, getters/seters etc
 
 makeCacheMatrix <- function(x = matrix()) {
   
@@ -27,11 +28,16 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
+#check "special matrix", if there is a cached inverse record, return, if not
+#calculate then return
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   m<- x$getInverse()
   
+  #help to see where the function gets the result 
+  #if its chached, you will see "inverse cache exist"
+  #if it doesnt, you will see ""Too bad, its not in the cache,, working on it!!!!!""
   if(!is.null(m)){
     message("inverse cache exist")
     return(m)
