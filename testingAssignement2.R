@@ -1,4 +1,4 @@
-source(cachematrix)
+source("cachematrix.R")
 
 Mat3 <- matrix(rnorm(10000), ncol=100, nrow = 100)
 
